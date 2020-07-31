@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 0.7rem;
+}
+
+header h2 {
+    margin-top: 0.5rem;
+}
+
+header i {
+    font-size: 1.5rem;
+    margin: 0.7rem 0.9rem 0.9rem 0.9rem;
+}
+
+header i:first-child {
+    color: blue;
+}
+
+header i:last-child {
+    color: rgb(219, 38, 38);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1.5rem 2rem 1.5rem;
+}
+
+form input {
+    margin-bottom: 1.5rem;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    outline: none;
+    border-radius: 10px;
+    border: 1.5px solid black
+}
+
+.searchmovie {
+    padding: 0.5rem;
+    font-size: 1.0rem;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.poster {
+    width: 43vw;
+    margin: 4px 2px 2px 2px;
+}
+
+.poster:hover {
+    transform: scale(1.14);
+    cursor: pointer;
+}
+
+.searchedmoviescontent, .popularmoviescontent,.ratedmoviescontent {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    background-color: black;
+    overflow-y: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.searchedmovies .content h2, .displaytrailer h2,.popularmovies .content h2,.ratedmovies .content h2 {
+    padding: 0.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    background-color: rgb(173, 164, 164);
+    color: blue;
+}
+
+.searchedmovies .content h5,.popularmovies .content h5,.ratedmovies .content h5 {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(203, 194, 255);
+    text-transform: uppercase;
+    padding: 0.1rem;
+    color: black;
+}
+
+.movienotfound h2 {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.movienotfound {
+    display: flex;
+    justify-content: center;
+}
+
+.movienotfound h2 i {
+    margin: 0 2rem;
+}
+
+.movienotfound h2 i:first-child {
+    color: red;
+}
+
+.movienotfound h2 i:last-child {
+    color: blue;
+}
+
+.movieinfo {
+  
+    background-color: black;
+
+    width: 100%;
+    height: 30vh;
+    border: 1px solid blue;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.movieinfowrapper{
+    margin-top: 0.5rem;
+}
+.popularmovies .content h2 i{
+    color: orangered;
+    font-size: 1.25rem;
+}
+.ratedmovies .content h2 i{
+    color: gold;
+    font-size: 1.25rem;
+}
+
+
+.none{
+    display: none;
+}
+.cross, .cross2,.cross3 {
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cross,.cross2 {
+    opacity: 0.7;
+}
+
+iframe{
+max-width: 45vw;
+max-height: 20vh;
+border: 1.5px solid white ;
+}
+iframe:first-child{
+    margin:  0 2px;
+}
+.notrailerfound{
+    color: white;
+}
+
+.notrailerfound i:first-child{
+    color: red;
+}
+.notrailerfound i:last-child{
+    color: blue;
+}
+
+footer{
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0.5rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.7rem;
+    margin-bottom: 0.3rem;
+
+}
+footer div i{
+    font-size: 1.4rem;
+}
+.twitter{
+    color: white;
+    padding: 0.5rem;
+}
+.linkedin{
+    color: white;
+    padding: 0.5rem;
+}
+.twitter:hover{
+    transform: scale(1.1);
+    color: #00acee;
+}
+.linkedin:hover{
+    transform: scale(1.1);
+    color: #0e76a8;
+}
+
+
+
+
+
+
+
+/* tabs */
+
+@media only screen and (min-width:650px) {
+    .poster {
+        width: 20vw;
+    }
+}
+
+/* desktop */
+
+@media only screen and (min-width:1000px) {
+    form {
+        margin: 2rem 9rem 2rem 9rem;
+    }
+    .searchmovie {
+        min-width: 30%;
+        margin: 0 auto;
+        padding: 0.9rem;
+        font-size: 1.1rem;
+    }
+    .poster {
+        width: 10vw;
+    }
+    .movienotfound {
+        padding: 2rem;
+        color: white;
+        font-size: 1.9rem;
+    }
+}
